@@ -1,0 +1,13 @@
+Use Deep Learning to Clone Driving Behaviour
+
+Steps used in the project:
+
+1. Used data (images and corresponding steering angle) provided by Udacity as input.
+2. Input images were augmented to simulate the behaviour of car being at different positions.
+3. Python generators were used to generate batches of augmented images (as input to model)
+4. Convolution neural network (similar to Nvidia's model) in Keras was built to predict steering angles from images.
+5. Dropout (to avoid overfitting), he_normal (initialization), ELU (activation) and Adam (optimizer) were used in creation        of model. 
+6. Keras model was trained and validated with a training and validation set using checkpoints and early stopping.
+7. Saved the weights (.h5) and model (.json)
+8. Tweaked drive.py file to take cropped image as input (same size as model's input).
+9. Ran the car around track one and it successfully ran without leaving the road (Simulator: Fastest, throttle = 0.2)
